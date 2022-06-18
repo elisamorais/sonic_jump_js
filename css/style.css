@@ -1,0 +1,99 @@
+html, body {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    display: none;
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(160, 77, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+
+}
+
+.stone {
+    position: absolute;
+    bottom: 0px;
+    width: 80px;
+    animation: stone-animation 1.5s infinite linear;
+}
+
+.sonic {
+    width: 110px;
+    position: absolute;
+    bottom: 0px;   
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.clouds {
+    position: absolute;
+    width: 400px;
+    animation: clouds-animation 10s infinite linear;
+}
+
+@keyframes stone-animation {
+    from {
+        right: 0;
+    }
+    to {
+        right: 100%;
+    }
+}
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 180px ;
+    }
+    50% {
+        botton: 180px;
+    }
+    60% {
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0;
+    }    
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+#startScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#btnStartGame {
+    background-color: #8f62fd;
+    color: white;
+    padding: 60px;
+    font-size: 40px;
+    border-radius: 5px 5px 5px 5px;
+    border: none;
+ 
+    box-shadow: 9px 10px 17px -3px rgba(0,0,0,0.68);
+    -webkit-box-shadow: 9px 10px 17px -3px rgba(0,0,0,0.68);
+    -moz-box-shadow: 9px 10px 17px -3px rgba(0,0,0,0.68);
+}
